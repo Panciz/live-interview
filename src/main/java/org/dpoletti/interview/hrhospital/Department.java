@@ -10,11 +10,7 @@ public class Department {
 	
 	public int calculateCost() 
 	{
-		int res = 0;
-		for(Worker w:workers) {
-			res+=w.calculateSalary();
-		}
-		return  res;
+		return workers.stream().map(Worker::calculateSalary).reduce(0,Integer::sum);
 	}
 
 	public void addWorker(Worker doc) {
