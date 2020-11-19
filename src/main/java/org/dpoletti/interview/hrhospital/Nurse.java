@@ -1,6 +1,6 @@
 package org.dpoletti.interview.hrhospital;
 
-public class Nurse {
+public class Nurse extends Worker {
 	
 	public String name;
 	public int workingHours;
@@ -8,7 +8,12 @@ public class Nurse {
 	public int nigthHour;
 	public int nightSalary;
 	
-	public int basicSalaryCalculation(){
+	private int basicSalaryCalculation(){
 		return workingHours*basicSalary+(nigthHour*nightSalary);
+	}
+
+	@Override
+	public int calculateSalary() {
+		return basicSalaryCalculation();
 	}
 }
