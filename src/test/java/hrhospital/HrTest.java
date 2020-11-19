@@ -2,6 +2,7 @@ package hrhospital;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.dpoletti.interview.hrhospital.ChirurgicalDoctor;
 import org.dpoletti.interview.hrhospital.Department;
 import org.dpoletti.interview.hrhospital.Doctor;
 import org.dpoletti.interview.hrhospital.Nurse;
@@ -27,7 +28,14 @@ public class HrTest {
 		d.addWorker(doc);
 		d.addWorker(n);
 		
-		assertEquals(3900,d.calculateCost());
+		ChirurgicalDoctor cdoc = new ChirurgicalDoctor();
+		cdoc.name="Doc1";
+		cdoc.basicSalary=20;
+		cdoc.workingHours=160; 
+		cdoc.operations=10;
+		cdoc.bonusOperation=100; //4600
+		
+		assertEquals(8500,d.calculateCost());
 	} 
 	
 }
