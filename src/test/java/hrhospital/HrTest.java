@@ -33,9 +33,11 @@ public class HrTest {
 		cdoc.basicSalary=20;
 		cdoc.workingHours=160; 
 		cdoc.operations=10;
-		cdoc.bonusOperation=100; //4600
+		cdoc.bonusOperation=100; 
 		
-		assertEquals(8500,d.calculateCost());
+		d.addWorker(cdoc);
+		
+		assertEquals(8100,d.calculateCost());
 	} 
 	
 }
