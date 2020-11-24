@@ -1,0 +1,66 @@
+/**
+
+
+The application must calculate the total costs of an hospital department as the total sum of the employee salaries.
+There are different type of workers (Nurses, Auxiliary, Director, Doctors....), for each worker there is a different way to calculate the salary.
+
+1. Add the missing code that allows the main to run. 
+2. Imagine to add a different type of worker
+3. Use Stream features to calculate the department
+
+
+*/
+
+
+public static final void main(String args[]) {
+		Department d = new Department();
+		Doctor doc = new Doctor();
+		doc.name="Doc1";
+		doc.basicSalary=20;
+		doc.workingHours=160; 
+		Nurse n = new Nurse();
+		n.name="Nurse1";
+		n.nightSalary=10;
+		n.basicSalary=5; 
+		n.workingHours=100;
+		n.nigthHour=20; 
+		
+		d.addWorker(doc);
+		d.addWorker(n);
+
+		System.out.println(d.calculateCost());
+}
+	
+	
+public class Department {
+		
+}
+
+
+public class Doctor {
+
+	
+	public String name;
+	public int workingHours;
+	public int basicSalary;
+	
+	private int basicSalaryCalculation(){
+		return workingHours*basicSalary;
+	}
+	
+}
+
+
+public class Nurse {
+	
+	public String name;
+	public int workingHours;
+	public int basicSalary;
+	public int nigthHour;
+	public int nightSalary;
+	
+	private int nurseSalaryCalculation(){
+		return workingHours*basicSalary+(nigthHour*nightSalary);
+	}
+
+}
