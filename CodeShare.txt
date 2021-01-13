@@ -3,6 +3,7 @@
 
 The application must calculate the total costs of an hospital department as the total sum of the employee salaries.
 There are different type of workers (Nurses, Auxiliary, Director, Doctors....), for each worker there is a different way to calculate the salary.
+For example the director has no extra time but there is the bonus, the nurses has nights hours, etc...
 
 1. Add the missing code that allows the main to run. 
 2. Imagine to add a different type of worker
