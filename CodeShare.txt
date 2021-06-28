@@ -14,22 +14,22 @@ For example the director has no extra time but there is the bonus, the nurses ha
 
 
 public static final void main(String args[]) {
-		Department d = new Department();
-		Doctor doc = new Doctor();
-		doc.name="Doc1";
-		doc.basicSalary=20;
-		doc.workingHours=160; 
-		Nurse n = new Nurse();
-		n.name="Nurse1";
-		n.nightSalary=10;
-		n.basicSalary=5; 
-		n.workingHours=100;
-		n.nigthHour=20; 
+		Department department = new Department();
+		Doctor doctor1 = new Doctor();
+		doctor1.name="Doc1";
+		doctor1.basicSalary=20;
+		doctor1.workingHours=160; 
+		Nurse nurse1 = new Nurse();
+		nurse1.name="Nurse1";
+		nurse1.nightSalary=10;
+		nurse1.basicSalary=5; 
+		nurse1.workingHours=100;
+		nurse1.nigthHour=20; 
 		
-		d.addWorker(doc);
-		d.addWorker(n);
+		d.addWorker(doctor1);
+		d.addWorker(nurse1);
 
-		System.out.println(d.calculateCost());
+		System.out.println(department.calculateCost());
 }
 	
 	
