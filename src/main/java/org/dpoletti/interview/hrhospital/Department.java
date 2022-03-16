@@ -3,7 +3,7 @@ package org.dpoletti.interview.hrhospital;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Department {
+public class Department implements CostCenter{
 
 	private final List<Worker> workers = new ArrayList<Worker>();
 	
