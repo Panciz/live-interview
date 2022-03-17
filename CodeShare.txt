@@ -1,38 +1,60 @@
 /**
 
 
-The application must calculate the total costs of an hospital department as the total sum of the employee salaries.
+The application must calculate the total cost of an hospital as total sum of the cost centers that  contains.
+
+
+The cost centers can be departments or independent workers (For example independent doctor that are not related to a specific department )
+
+Each department can contains different workers.
+
 There are different type of workers (Nurses, Auxiliary, Director, Doctors....), for each worker there is a different way to calculate the salary.
 For example the director has no extra time but there is the bonus, the nurses has nights hours, etc...
 
-1. Add the missing code that allows the main to run. 
-2. Imagine to add a different type of worker
-3. Use Stream features to calculate the department
+
+Add the missing code that allows the main to run!
+
 
 
 */
 
 
+
 public static final void main(String args[]) {
+
+
+		// costCenters = new ArrayList<>();	
+				
 		Department department = new Department();
 		Doctor doctor1 = new Doctor();
 		doctor1.name="Doc1";
-		doctor1.basicSalary=20;
-		doctor1.workingHours=160; 
+		doctor1.basicSalary=100;
+		doctor1.workingHours=10; 
 		Nurse nurse1 = new Nurse();
 		nurse1.name="Nurse1";
 		nurse1.nightSalary=10;
-		nurse1.basicSalary=5; 
-		nurse1.workingHours=100;
-		nurse1.nigthHour=20; 
+		nurse1.basicSalary=9; 
+		nurse1.workingHours=10;
+		nurse1.nigthHour=1; 
 		
 		department.addWorker(doctor1);
 		department.addWorker(nurse1);
 
-		System.out.println(department.calculateCost());
+		Doctor indipendentDoctor = new Doctor();
+		indipendentDoctor.name="Doc1";
+		indipendentDoctor.basicSalary=200;
+		indipendentDoctor.workingHours=10; 
+		
+		costCenters.add(indipendentDoctor);
+		costCenters.add(department);
+		
+
+		//Calculate costs
+		System.out.println(costCenters.stream().map(CostCenter::calculateCost).reduce(0,Integer::sum));
+	
 }
-	
-	
+
+
 public class Department {
 		
 }
