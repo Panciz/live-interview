@@ -5,8 +5,6 @@ public class HrHospital {
 	
 	public static final void main(String args[]) {
 		Department department = new Department();
-		
-		
 		for(int i=0;i<5;i++) {
 			Doctor doctor1 = new Doctor();
 			doctor1.setName( (char)((int)(Math.random()*100)%26+65)+"-Doc"+i);
@@ -34,8 +32,6 @@ public class HrHospital {
 			department.addWorker(cdoctor);
 
 		}
-
-	
 		department.printListWorkerByName();
 		department.printWorkers();
 		department.printWorkerBySalary();
