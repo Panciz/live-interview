@@ -32,6 +32,15 @@ public class HrHospital {
 			department.addWorker(cdoctor);
 
 		}
+		
+		
+		for(int i=0;i<2;i++) {
+			Technician technician = new Technician();
+			technician.setName((char)((int)(Math.random()*100)%26+65)+"-Tec"+i);
+
+			department.addWorker(technician);
+
+		}
 		department.printListWorkerByName();
 		department.printWorkers();
 		department.printWorkerBySalary();
