@@ -1,6 +1,6 @@
 package org.dpoletti.interview.hrhospital;
 
-public class ChirurgicalDoctor extends Doctor {
+public class ChirurgicalDoctor extends Doctor implements Alertable {
 
 	public int operations;
 	public int bonusOperation;

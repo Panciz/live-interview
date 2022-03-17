@@ -2,13 +2,18 @@
 
 
 The application store the workers of an Hospital departement and provide some report such the as list of doctors by name or by salaries.
-There are different type of workers (Nurses, Auxiliary, Director, Doctors....), for each worker there is a different way to calculate the salary.
-For example the director has no extra time but there is the bonus, the nurses has nights hours, etc...
+There are different type of workers (Nurses, Technician, Chirurgical Doctors, Doctors), for each worker there is a different way to calculate the salary.
+For example the Chirurgical Doctors has no extra time but they have a bonus for each operation, the nurses has nights hours.
+
+The application should be able also to send a general alert to call some case of worker in case of emergency. 
+In this case Technician and  Chirurgical Doctors should be allert. 
 
 
 
+Add the missing code that allows the main to run. 
 
-1. Add the missing code that allows the main to run. 
+
+
 
 */
 
@@ -43,18 +48,28 @@ public static final void main(String args[]) {
 
 		}
 		
-		
+		for(int i=0;i<2;i++) {
+			Technician technician = new Technician();
+			technician.setName((char)((int)(Math.random()*100)%26+65)+"-Tec"+i);
+			department.addWorker(technician);
+
+		}
 		//it prints the list of worker by name ascending as
 		// Name - Salary
 		department.printListWorkerByName();
 		//it prints the list of worker by salary ascending  as
 		// Name - Salary
 		department.printWorkerBySalary();
+		
+		// Print Send alert for each Technician and ChirurgicalDoctor
+		department.printWorkerBySalary();
+		
 }
 	
 	
 public class Department {
 		
+	
 }
 
 
@@ -83,5 +98,22 @@ public class Nurse {
 		return workingHours*basicSalary+(nigthHour*nightSalary);
 	}
 
+}
+public class ChirurgicalDoctor extends Doctor {
+
+	public int operations;
+	public int bonusOperation;
+
+	public int getSalary() {
+		return super.calculateSalary()+(operations*bonusOperation);
+	}
+	
+	
+}
+public class Technician  {
+
+	public int techSalary() {
+		return 100;
+	}
 }
 

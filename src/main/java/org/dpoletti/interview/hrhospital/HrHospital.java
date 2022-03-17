@@ -45,6 +45,6 @@ public class HrHospital {
 		department.printWorkers();
 		department.printWorkerBySalary();
 		department.printWorkers();
-
+		department.alertEmergency();
 	}
 }

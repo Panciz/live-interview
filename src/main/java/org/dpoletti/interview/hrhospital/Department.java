@@ -70,4 +70,10 @@ public class Department {
 		workers.add(doc);
 	}
 	
+	public void alertEmergency() {
+		workers.stream().filter(w->w instanceof Alertable)
+					.map(w->(Alertable)w)
+					.forEach(a->a.sendAllert());
+	}
+	
 }
