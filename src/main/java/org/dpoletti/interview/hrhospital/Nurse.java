@@ -2,7 +2,6 @@ package org.dpoletti.interview.hrhospital;
 
 public class Nurse extends Worker {
 	
-	public String name;
 	public int workingHours;
 	public int basicSalary;
 	public int nigthHour;

@@ -3,7 +3,6 @@ package org.dpoletti.interview.hrhospital;
 public class Doctor extends Worker {
 
 	
-	public String name;
 	public int workingHours;
 	public int basicSalary;
 	
