@@ -41,10 +41,9 @@ public class HrHospital {
 			department.addWorker(technician);
 
 		}
+		department.printWorkers();
 		department.printListWorkerByName();
-		department.printWorkers();
 		department.printWorkerBySalary();
-		department.printWorkers();
 		department.alertEmergency();
 	}
 }
