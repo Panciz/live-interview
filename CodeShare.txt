@@ -3,16 +3,16 @@
 
 	The application stores the workers of an Hospital department and provides some reports such as the list of doctors by name or by salaries.
 	There are different type of workers (Nurses, Technician,  Doctors, Chirurgical Doctors), for each worker there is a different way to calculate the salary.
-	For example the Chirurgical Doctors have no extra time but they have a bonus for each operation, the nurses have nights hours.
+	For example the Surgical Doctors have no extra time but they have a bonus for each operation, the nurses have nights hours.
 	
 	Add the missing code and structures that allows the code in the main to:
 	
-	- 1 Print list of worker simple
-	- 2 Print list of worker ordered by name
-	- 3 Print list of worker by salary
+	- 1 Print list of worker simple (print  name - salary)
+	- 2 Print list of worker ordered by name (print  name - salary)
+	- 3 Print list of worker by salary (print  name - salary)
 	
 	The application should be able also to send a general alert to call some case of worker in case of emergency. 
-	In this case Technician and  Chirurgical Doctors should be alerted. Add the code in order to 
+	In this case Technician and  Surgical Doctors should be alerted. Add the code in order to 
 	
 	- 4 Print list of workers that can be alerted.
 
